@@ -1,0 +1,46 @@
+<br>
+<br>
+<br>
+<br>
+<div class="main-block">
+    <h1>Apply Leave</h1>
+    <form #searchForm="ngForm" (submit)="onFormSubmit(searchForm)">
+        <!-- (submit)="onFormSubmit(searchForm)" -->
+      <hr>
+    
+      <label>Employee ID: </label><br>
+      <input type="text" name="id" placeholder="ex. 10 *" ngModel #id="ngModel"><br /><br />
+      <hr>
+      <div class="btn-block">
+        <input type="submit"  value="Search">
+      </div>
+    </form>
+  </div>
+<br>
+  <br>
+  <div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>EMPLOYEE ID</th>
+                <th>NAME</th>
+                <th>LEAVE BALANCE</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+    <tbody >
+        <tr>
+            <td>{{employeeArray.id}}</td>
+            <td>{{employeeArray.name}}</td>
+            <td>{{employeeArray.leaveBalance}}</td>
+     <td>
+         <span class="action_btn">
+            <a (click)="applyLeave(employeeArray.id, employeeArray.name)">Apply Leave</a>
+            <!-- (click)="bookFlight(f.id)" -->
+        </span>
+    </td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>

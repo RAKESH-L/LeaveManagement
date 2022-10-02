@@ -1,0 +1,32 @@
+<!-- <p>status works!</p>
+<div *ngFor="let s of statusArray">
+{{s.name}}
+{{s.status}}
+</div> -->
+
+<br>
+<div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>EMPLOYEE ID</th>
+                <th>NAME</th>
+                <th>START DATE</th>
+                <th>END DATE</th>
+                <th>NO. OF DAYS</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+    <tbody *ngFor="let s of statusArray">
+        <tr>
+            <td>{{s.employeeId}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.startDate}}</td>
+            <td>{{s.endDate}}</td>
+            <td>{{s.days}}</td>
+            <td>{{s.status}}</td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>

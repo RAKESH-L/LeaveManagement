@@ -1,0 +1,31 @@
+<!-- <p>all-employee works!</p> -->
+<!-- <div *ngFor="let e of employeeArr">
+{{e.id}}
+{{e.name}}
+</div> -->
+<br>
+<div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>EMPLOYEE ID</th>
+                <th>NAME</th>
+                <th>LEAVE BALANCE</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+    <tbody *ngFor="let e of employeeArr">
+        <tr>
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.leaveBalance}}</td>
+     <td>
+         <span class="action_btn">
+             <a routerLink="/booking-confirmation">Apply Leave</a>
+        </span>
+    </td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>

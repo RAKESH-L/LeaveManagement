@@ -1,0 +1,27 @@
+{{employee.name}}
+<div class="form-style-5">
+    <form #leaveForm="ngForm" (submit)="onFormSubmit(leaveForm)">
+        <!-- (submit)="onFormSubmit(leaveForm)" -->
+    <fieldset>
+    <legend><span class="number">1</span>Leave Request</legend>
+    <label>Start date: </label>
+    <input type="date" name="startDate"  ngModel #startDate="ngModel">
+    <label>End date: </label>
+    <input type="date" name="endDate"  ngModel #endDate="ngModel">
+    <input type="text" name="days" placeholder="No. of Days *" ngModel #days="ngModel">
+    <label>Type of leave: </label>
+    <select name="leaveType" placeholder="Type of leave *" ngModel #leaveType="ngModel">
+        <option>Earned Leave</option>
+        <option>Casual Leave</option>
+        <option>Sick Leave</option>
+        <option>Maternity Leave</option>
+        <option>Marriage Leave</option>
+        <option>Paternity Leave</option>
+    </select>
+    <input type="text" name="leaveReason" placeholder="Leave Resone *" ngModel #leaveReason="ngModel">
+    </fieldset>
+    <input type="submit" onclick="myFunction()" value="Apply leave" />
+    </form>
+    </div>
+
+

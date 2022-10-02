@@ -1,0 +1,42 @@
+<!-- <div *ngFor="let s of statusArry">
+{{s.id}}
+{{s.name}}
+{{s.startDate}}
+</div> -->
+
+<br>
+<div class="table_responsive" >
+    <table class="table table-bordered" >
+        <thead>
+            <tr>
+                <th>EMPLOYEE ID</th>
+                <th>NAME</th>
+                <th>START DATE</th>
+                <th>END DATE</th>
+                <th>NO. OF DAYS</th>
+                <th>LEAVE TYPE</th>
+                <th>LEAVE REASON</th>
+                <th>ACTON</th>
+            </tr>
+        </thead>
+    <tbody *ngFor="let s of statusArry">
+        <tr>
+            <td>{{s.employeeId}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.startDate}}</td>
+            <td>{{s.endDate}}</td>
+            <td>{{s.days}}</td>
+            <td>{{s.leaveType}}</td>
+            <td>{{s.leaveReason}}</td>
+     <td>
+         <span class="action_btn">
+             <a routerLink="/booking-confirmation" (click)="approveRequest(s.id)">Approve</a>
+             <!-- (click)="bookFlight(f.id)" -->
+             <a routerLink="/booking-confirmation" (click)="denyRequest(s.id)">Deny</a>
+        </span>
+    </td>
+    <br />
+    </tr>
+    </tbody>
+    </table>
+</div>
